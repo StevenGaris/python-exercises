@@ -179,20 +179,99 @@
 # Assume that the user will enter valid data.
 # Only continue if the user agrees to.
 
-user_number = int(input('What number would you like to go up to? '))
-for num in range(1, user_number + 1):
-    print("{:3d}".format(num), "{:3d}".format(num ** 2), "{:3d}".format(num ** 3))
+# user_number = int(input('What number would you like to go up to? '))
+# print('Here is your table.')
+# for num in range(1, user_number + 1):
+#     print("{:3d}".format(num), "{:3d}".format(num ** 2), "{:3d}".format(num ** 3))
+#
+# answer = (input('Would you like to continue? '))
+# if answer == 'no':
+#     print('End Process')
+#
+# while answer == 'yes':
+#     user_number = int(input('What number would you like to go up to? '))
+#     print('Here is your table.')
+#
+#     for num in range(1, user_number + 1):
+#         print("{:3d}".format(num), "{:3d}".format(num ** 2), "{:3d}".format(num ** 3))
+#
+#     answer = (input('Would you like to continue? '))
+#
+#     if answer == 'no':
+#         print('End Process')
 
-answer = (input('Would you like to continue? '))
-if answer == 'no':
-    print('End Process')
 
-while answer == 'yes':
-    user_number = int(input('What number would you like to go up to? '))
-    for num in range(1, user_number + 1):
-        print("{:3d}".format(num), "{:3d}".format(num ** 2), "{:3d}".format(num ** 3))
+# Convert given number grades into letter grades.
 
-    answer = (input('Would you like to continue? '))
+# Prompt the user for a numerical grade from 0 to 100.
+# Display the corresponding letter grade.
+# Prompt the user to continue.
+# Assume that the user will enter valid integers for the grades.
+# The application should only continue if the user agrees to.
 
-    if answer == 'no':
-        print('End Process') 
+# user_score = int(input('Pick a number grade from 0 to 100: '))
+# if user_score in range(88,100):
+#     print(user_score, ' is an A.')
+# elif user_score in range(80,87):
+#     print(user_score, ' is a B.')
+# elif user_score in range(67,79):
+#     print(user_score, ' is a C.')
+# elif user_score in range(60,66):
+#     print(user_score, ' is a D.')
+# elif user_score in range(0,59):
+#     print(user_score, ' is a F.')
+#
+# user_answer = input('Would you like to get another grade? ')
+#
+# if user_answer == 'no':
+#     print('End Process')
+#
+# while user_answer == 'yes':
+#     user_score = int(input('Pick a number grade from 0 to 100: '))
+#     if user_score in range(88, 100):
+#         print(user_score, ' is an A.')
+#     elif user_score in range(80, 87):
+#         print(user_score, ' is a B.')
+#     elif user_score in range(67, 79):
+#         print(user_score, ' is a C.')
+#     elif user_score in range(60, 66):
+#         print(user_score, ' is a D.')
+#     elif user_score in range(0, 59):
+#         print(user_score, ' is a F.')
+#
+#     user_answer = (input('Would you like to get another grade? '))
+#
+#     if user_answer == 'no':
+#         print('End Process')
+
+
+# Create a list of dictionaries where each dictionary represents a book that you have read.
+# Each dictionary in the list should have the keys title, author, and genre.
+# Loop through the list and print out information about each book.
+
+# books = ({'name': 'Harry Potter', 'author': 'JK Rowling', 'genre': 'Fantasy'},
+#          {'name': 'Eragon', 'author': 'Christopher Paolini', 'genre': 'Fantasy'},
+#          {'name': 'Lord of the Rings', 'author': 'JRR Tolkien', 'genre': 'Fantasy'})
+#
+# for element in books:
+#     print(element['name'])
+
+
+
+# Prompt the user to enter a genre, then loop through your books list and
+# print out the titles of all the books in that genre.
+
+books = ({'name': 'Harry Potter', 'author': 'JK Rowling', 'genre': 'Fantasy'},
+         {'name': 'Eragon', 'author': 'Christopher Paolini', 'genre': 'Fantasy'},
+         {'name': 'Lord of the Rings', 'author': 'JRR Tolkien', 'genre': 'Fantasy'},
+         {'name': 'Enders Game', 'author': 'Orson Scott Card', 'genre': 'Scifi'},
+         {'name': 'The Shining', 'author': 'Stephen King', 'genre': 'Horror'},
+         {'name': 'It', 'author': 'Stephen King', 'genre': 'Horror'},)
+
+user_pick = input('Pick a genre: ')
+
+for element in books:
+    if element['genre'] == user_pick:
+        print(element['name'])
+
+

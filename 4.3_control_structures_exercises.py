@@ -96,7 +96,6 @@
 #     print(user_number, ' x ', num, ' = ', (user_number * num))
 
 # II
-# num = 1
 # for n in range(1,10):
 #     print(str(n) * n)
 #     n += 1
@@ -181,8 +180,11 @@
 
 # user_number = int(input('What number would you like to go up to? '))
 # print('Here is your table.')
+#
+# print('number | squared | cubed')
+# print('------ | ------- | -----')
 # for num in range(1, user_number + 1):
-#     print("{:3d}".format(num), "{:3d}".format(num ** 2), "{:3d}".format(num ** 3))
+#     print("{:6d}".format(num), "{:9d}".format(num ** 2), "{:7d}".format(num ** 3))
 #
 # answer = (input('Would you like to continue? '))
 # if answer == 'no':
@@ -209,24 +211,10 @@
 # Assume that the user will enter valid integers for the grades.
 # The application should only continue if the user agrees to.
 
-# user_score = int(input('Pick a number grade from 0 to 100: '))
-# if user_score in range(88,100):
-#     print(user_score, ' is an A.')
-# elif user_score in range(80,87):
-#     print(user_score, ' is a B.')
-# elif user_score in range(67,79):
-#     print(user_score, ' is a C.')
-# elif user_score in range(60,66):
-#     print(user_score, ' is a D.')
-# elif user_score in range(0,59):
-#     print(user_score, ' is a F.')
+
+# user_continues = 'yes'
 #
-# user_answer = input('Would you like to get another grade? ')
-#
-# if user_answer == 'no':
-#     print('End Process')
-#
-# while user_answer == 'yes':
+# while user_continues == 'yes':
 #     user_score = int(input('Pick a number grade from 0 to 100: '))
 #     if user_score in range(88, 100):
 #         print(user_score, ' is an A.')
@@ -239,10 +227,7 @@
 #     elif user_score in range(0, 59):
 #         print(user_score, ' is a F.')
 #
-#     user_answer = (input('Would you like to get another grade? '))
-#
-#     if user_answer == 'no':
-#         print('End Process')
+#     user_continues = input('Do you want to continue? ')
 
 
 # Create a list of dictionaries where each dictionary represents a book that you have read.
@@ -253,25 +238,32 @@
 #          {'name': 'Eragon', 'author': 'Christopher Paolini', 'genre': 'Fantasy'},
 #          {'name': 'Lord of the Rings', 'author': 'JRR Tolkien', 'genre': 'Fantasy'})
 #
-# for element in books:
-#     print(element['name'])
+# for book in books:
+#     print('------------')
+#     print(book['name'])
+#     print(book['author'])
+#     print(book['genre'])
 
 
 
 # Prompt the user to enter a genre, then loop through your books list and
 # print out the titles of all the books in that genre.
 
-books = ({'name': 'Harry Potter', 'author': 'JK Rowling', 'genre': 'Fantasy'},
-         {'name': 'Eragon', 'author': 'Christopher Paolini', 'genre': 'Fantasy'},
-         {'name': 'Lord of the Rings', 'author': 'JRR Tolkien', 'genre': 'Fantasy'},
-         {'name': 'Enders Game', 'author': 'Orson Scott Card', 'genre': 'Scifi'},
-         {'name': 'The Shining', 'author': 'Stephen King', 'genre': 'Horror'},
-         {'name': 'It', 'author': 'Stephen King', 'genre': 'Horror'},)
-
-user_pick = input('Pick a genre: ')
-
-for element in books:
-    if element['genre'] == user_pick:
-        print(element['name'])
+# books = ({'name': 'Harry Potter', 'author': 'JK Rowling', 'genre': 'Fantasy'},
+#          {'name': 'Eragon', 'author': 'Christopher Paolini', 'genre': 'Fantasy'},
+#          {'name': 'Lord of the Rings', 'author': 'JRR Tolkien', 'genre': 'Fantasy'},
+#          {'name': 'Enders Game', 'author': 'Orson Scott Card', 'genre': 'Scifi'},
+#          {'name': 'The Shining', 'author': 'Stephen King', 'genre': 'Horror'},
+#          {'name': 'It', 'author': 'Stephen King', 'genre': 'Horror'},)
+#
+# user_pick = input('Pick a genre: ')
+#
+# for book in books:
+#     if book['genre'] == user_pick:
+#         print('--------')
+#         print(book['name'])
+#         print(book['author'])
+#         print(book['genre'])
+#
 
 

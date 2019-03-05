@@ -87,24 +87,55 @@
 
 # For Loops
 
+# I
 # Write some code that prompts the user for a number,
 # then shows a multiplication table up through 10 for that number.
 
-user_number = int(input('Pick a number: '))
+# user_number = int(input('Pick a number: '))
+# for num in range(1,11):
+#     print(user_number, ' x ', num, ' = ', (user_number * num))
 
-for user_number
+# II
+# num = 1
+# for n in range(1,10):
+#     print(str(n) * n)
+#     n += 1
 
 
 
+# break and continue
 
+# I
+# Prompt the user for an odd number between 1 and 50.
+# Use a loop and a break statement to continue prompting the user if they enter invalid input.
+# (Hint: use the isdigit method on strings to determine this).
+# Use a loop and the continue statement to output all the odd numbers between 1 and 50,
+# except for the number the user entered.
+
+# user_number = input('Pick an odd number between 1 and 50: ')
+# while not user_number.isdigit() or int(user_number) % 2 == 0 or int(user_number) > 50:
+#     user_number = input('Pick an odd number between 1 and 50: ')
+#     continue
+# user_number = int(user_number)
+# print('The number to skip is:', user_number)
+# print('')
+# for num in range(1,51):
+#     if num % 2 == 1 and num != user_number:
+#         print('Here is an odd number:', num)
+#     if num == user_number:
+#         print('Yikes! Skipping number:', user_number)
 
 
 # The input function can be used to prompt for input and use that input in your python code.
 # Prompt the user to enter a positive number and write a loop that counts from 0 to that number.
-# (Hints: first make sure that the value the user entered is a valid number, also
-# note that the input function returns a string, so you'll need to convert this to a numeric type.)
+# (Hints: first make sure that the value the user entered is a valid number,
+# also note that the input function returns a string, so you'll need to convert this to a numeric type.)
 
-# user_number = int(input("Pick a positive number: "))
+# user_number = input("Pick a positive number: ")
+# while not user_number.isdigit() or int(user_number) < 1:
+#     user_number = input("Pick a positive number: ")
+#     continue
+# user_number = int(user_number)
 # if user_number < 1:
 #     print("Your number was not a positive number, try again.")
 # else:
@@ -115,10 +146,53 @@ for user_number
 # Write a program that prompts the user for a positive integer.
 # Next write a loop that prints out the numbers from the number the user entered down to 1.
 
-# user_number = int(input("Pick a positive number: "))
+# user_number = input("Pick a positive number: ")
+# while not user_number.isdigit() or int(user_number) < 1:
+#     user_number = input("Pick a positive number: ")
+#     continue
+# user_number = int(user_number)
 # if user_number < 1:
 #     print("Your number was not a positive number, try again.")
 # else:
 #     for n in range(0, user_number):
 #         print(user_number - n)
 
+
+# Fizzbuzz
+
+# numbers = range(1,101)
+# for num in numbers:
+#     if num % 3 == 0 and num % 5 == 0:
+#         print('FizzBuzz')
+#     elif num % 3 == 0:
+#         print('Fizz')
+#     elif num % 5 == 0:
+#         print('Buzz')
+#     else:
+#         print(num)
+
+# Display a table of powers.
+
+# Prompt the user to enter an integer.
+# Display a table of squares and cubes from 1 to the value entered.
+# Ask if the user wants to continue.
+# Assume that the user will enter valid data.
+# Only continue if the user agrees to.
+
+user_number = int(input('What number would you like to go up to? '))
+for num in range(1, user_number + 1):
+    print("{:3d}".format(num), "{:3d}".format(num ** 2), "{:3d}".format(num ** 3))
+
+answer = (input('Would you like to continue? '))
+if answer == 'no':
+    print('End Process')
+
+while answer == 'yes':
+    user_number = int(input('What number would you like to go up to? '))
+    for num in range(1, user_number + 1):
+        print("{:3d}".format(num), "{:3d}".format(num ** 2), "{:3d}".format(num ** 3))
+
+    answer = (input('Would you like to continue? '))
+
+    if answer == 'no':
+        print('End Process') 

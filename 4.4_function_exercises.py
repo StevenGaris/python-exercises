@@ -1,4 +1,5 @@
 
+# Function
 
 # Define a function named is_two.
 # It should accept one input and return True if
@@ -146,10 +147,22 @@
 # % Completed will become completed
 
 
-
-def normalize_name(name):
-
-
+# def normalize_name(name):
+#     name = name.strip()
+#     name = name.lower()
+#     name = name.replace(' ', '_')
+#     for i in name:
+#         if i in ['!', '@', '#', '$', '%']:
+#             name = name.replace(i, '')
+#         elif name[0] == '_':
+#             name = name.replace('_', '')
+#
+#     return name
+#
+# print(normalize_name(' Steven Garis '))
+# print(normalize_name('TeXaS'))
+# print(normalize_name('         WoW '))
+# print(normalize_name(' % %  fun '))
 
 
 # Write a function named cumsum
@@ -158,6 +171,15 @@ def normalize_name(name):
 # cumsum([1, 1, 1]) returns [1, 2, 3]
 # cumsum([1, 2, 3, 4]) returns [1, 3, 6, 10]
 
+
+# def cumsum(num_list):
+#     return [sum(num_list[: i + 1]) for i in range(len(num_list))]
+#
+#
+# print(cumsum([1, 1, 1]))
+# print(cumsum([1, 2, 3, 4]))
+#
+#
 
 
 

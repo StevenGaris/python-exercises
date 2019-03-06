@@ -146,13 +146,12 @@
 # First Name will become first_name
 # % Completed will become completed
 
-
+# LETTERS = 'abcdefghijklmnopqrstuvwxyz_1234567890'
+#
 # def normalize_name(name):
-#     name = name.strip()
-#     name = name.lower()
-#     name = name.replace(' ', '_')
+#     name = name.strip().lower().replace(' ', '_')
 #     for i in name:
-#         if i in ['!', '@', '#', '$', '%']:
+#         if i not in LETTERS:
 #             name = name.replace(i, '')
 #         elif name[0] == '_':
 #             name = name.replace('_', '')
@@ -160,9 +159,9 @@
 #     return name
 #
 # print(normalize_name(' Steven Garis '))
-# print(normalize_name('TeXaS'))
-# print(normalize_name('         WoW '))
-# print(normalize_name(' % %  fun '))
+# print(normalize_name('Name'))
+# print(normalize_name('First Name'))
+# print(normalize_name('% complete'))
 
 
 # Write a function named cumsum
@@ -171,25 +170,31 @@
 # cumsum([1, 1, 1]) returns [1, 2, 3]
 # cumsum([1, 2, 3, 4]) returns [1, 3, 6, 10]
 
-
+## wow a one liner
 # def cumsum(num_list):
 #     return [sum(num_list[: i + 1]) for i in range(len(num_list))]
+
+# def cumsum(numbers):
+#     sums = [numbers[0]]
+#     for current_number in numbers[1:]:
+#         last_number = sums[-1]
+#         next_number = last_number + current_number
+#         sums.append(next_number)
+#     return sums
 #
 #
 # print(cumsum([1, 1, 1]))
 # print(cumsum([1, 2, 3, 4]))
-#
-#
+
+
 
 
 
 
 
 # Bonus
-
-
-
-# Create a function named twelveto24. It should accept a string in the format 10:45am or 4:30pm and return a string that is the representation of the time in a 24-hour format. Bonus write a function that does the opposite.
+# Create a function named twelveto24. It should accept a string in the format 10:45am or 4:30pm and
+# return a string that is the representation of the time in a 24-hour format. Bonus write a function that does the opposite.
 
 
 
@@ -199,9 +204,6 @@
 
 # col_index('A') returns 1
 
-
-
 # col_index('B') returns 2
-
 
 # col_index('AA') returns 27

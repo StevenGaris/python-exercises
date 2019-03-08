@@ -104,23 +104,69 @@ avg_bal = grand_total / total_users
 
 # User with the lowest balance
 
-total_name = []
+name_list = []
+bal_list = []
 
 for element in file_data:
-    total_name.append(element['name'])
+    name_list.append(element['name'])
+    bal_list.append(float(element['balance'].replace('$','').replace(',','')))
 
-print(total_name)
+min_bal = min(bal_list)
+min_index = bal_list.index(min_bal)
+min_name = name_list[int(min_index)]
+
+# print(min_name)
+
+
 
 
 # User with the highest balance
 
+name_list = []
+bal_list = []
+
+for element in file_data:
+    name_list.append(element['name'])
+    bal_list.append(float(element['balance'].replace('$','').replace(',','')))
+
+max_bal = max(bal_list)
+max_index = bal_list.index(max_bal)
+max_name = name_list[int(max_index)]
+
+# print(max_name)
+
+
 
 # Most common favorite fruit
+
+fruit_list = []
+
+for element in file_data:
+    fruit_list.append(element['favoriteFruit'])
+
+# print(max(fruit_list))
+
 
 
 # Least most common favorite fruit
 
+fruit_list = []
+
+for element in file_data:
+    fruit_list.append(element['favoriteFruit'])
+
+# print(min(fruit_list))
+
 
 # Total number of unread messages for all users
 
+greeting_list = []
 
+for element in file_data:
+    greeting_list.append(element['greeting'])
+
+
+
+
+
+print(greeting_list)

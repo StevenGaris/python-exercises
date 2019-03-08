@@ -161,12 +161,24 @@ for element in file_data:
 # Total number of unread messages for all users
 
 greeting_list = []
+greeting_string = ', '
 
 for element in file_data:
     greeting_list.append(element['greeting'])
 
+greeting_string = greeting_string.join(greeting_list)
+
+for i in greeting_string:
+    if i not in '1234567890 ':
+        greeting_string = greeting_string.replace(i, '')
+
+greeting_string = int(greeting_string)
 
 
 
 
-print(greeting_list)
+
+print(greeting_string)
+
+
+

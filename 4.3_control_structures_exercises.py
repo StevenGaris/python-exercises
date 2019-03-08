@@ -111,18 +111,18 @@
 # Use a loop and the continue statement to output all the odd numbers between 1 and 50,
 # except for the number the user entered.
 
-# user_number = input('Pick an odd number between 1 and 50: ')
-# while not user_number.isdigit() or int(user_number) % 2 == 0 or int(user_number) > 50:
-#     user_number = input('Pick an odd number between 1 and 50: ')
-#     continue
-# user_number = int(user_number)
-# print('The number to skip is:', user_number)
-# print('')
-# for num in range(1,51):
-#     if num % 2 == 1 and num != user_number:
-#         print('Here is an odd number:', num)
-#     if num == user_number:
-#         print('Yikes! Skipping number:', user_number)
+user_number = input('Pick an odd number between 1 and 50: ')
+while not user_number.isdigit() or int(user_number) % 2 == 0 or int(user_number) > 50:
+    user_number = input('Pick an odd number between 1 and 50: ')
+    continue
+user_number = int(user_number)
+print('The number to skip is:', user_number)
+print('')
+for num in range(1,51):
+    if num % 2 == 1 and num != user_number:
+        print('Here is an odd number:', num)
+    if num == user_number:
+        print('Yikes! Skipping number:', user_number)
 
 
 # The input function can be used to prompt for input and use that input in your python code.
